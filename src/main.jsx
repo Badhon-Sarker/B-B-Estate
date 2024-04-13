@@ -12,6 +12,9 @@ import Registration from './Routes/Registration/Registration.jsx';
 import Login from './Routes/Login/Login.jsx';
 import UpdateProfile from './Routes/UpdateProfile/UpdateProfile.jsx';
 import AboutUs from './Routes/AboutUs/AboutUs.jsx';
+import AuthProvider from './Components/AuthProvider/AuthProvider.jsx';
+import PrivateRoute from './PrivateRoute/PrivateRoute.jsx';
+import ErrorPage from './Components/ErrorPage/ErrorPage.jsx';
 
 
 
@@ -19,6 +22,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: '/',
@@ -39,7 +43,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/aboutus',
-        element: <AboutUs></AboutUs>
+        element: <PrivateRoute><AboutUs></AboutUs></PrivateRoute>
       }
     ]
   },
@@ -51,6 +55,10 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
+
   </React.StrictMode>,
 )
