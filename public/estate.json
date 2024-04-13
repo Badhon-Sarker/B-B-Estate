@@ -1,0 +1,111 @@
+[
+    {
+      "id": 1,
+      "estate_title": "Cozy Single-Family Home",
+      "segment_name": "Single Family Home",
+      "description": "Charming single-family home perfect for small families or couples. Features a spacious living room, modern kitchen, and a backyard garden.",
+      "price": "$300,000",
+      "status": "sale",
+      "area": "1800 sq ft",
+      "location": "Suburban Neighborhood",
+      "facilities": ["Living Room", "Kitchen", "Backyard"],
+      "image": "https://i.ibb.co/ZdKFRPK/istockphoto-1255835530-1024x1024.jpg"
+    },
+    {
+      "id": 2,
+      "estate_title": "Luxurious Townhouse",
+      "segment_name": "Townhouse",
+      "description": "Elegant townhouse with three floors of luxury living space. Includes a private garage, rooftop terrace, and access to community amenities.",
+      "price": "$500,000",
+      "status": "sale",
+      "area": "2500 sq ft",
+      "location": "Urban Area",
+      "facilities": ["Living Room", "Kitchen", "Rooftop Terrace", "Garage"],
+      "image": "https://i.ibb.co/pbCK1bj/istockphoto-1393537665-1024x1024.jpg"
+    },
+    {
+      "id": 3,
+      "estate_title": "Modern Apartment",
+      "segment_name": "Apartment",
+      "description": "Sleek and stylish apartment with floor-to-ceiling windows offering panoramic city views. Building amenities include a fitness center and rooftop pool.",
+      "price": "$2,500/month",
+      "status": "rent",
+      "area": "1000 sq ft",
+      "location": "Downtown",
+      "facilities": ["Living Room", "Kitchen", "Fitness Center", "Rooftop Pool"],
+      "image": "https://i.ibb.co/CWJ4Scv/istockphoto-1177797403-1024x1024.jpg"
+    },
+    {
+      "id": 4,
+      "estate_title": "Student Housing Complex",
+      "segment_name": "Student Housing",
+      "description": "Modern student housing complex located near universities. Furnished units with shared common areas, study lounges, and onsite laundry facilities.",
+      "price": "$800/month per student",
+      "status": "rent",
+      "area": "Varies",
+      "location": "University Campus",
+      "facilities": ["Shared Common Areas", "Study Lounges", "Laundry Facilities"],
+      "image": "https://i.ibb.co/p2gVK0H/istockphoto-1410534409-1024x1024.jpg"
+    },
+    {
+      "id": 5,
+      "estate_title": "Senior Living Community",
+      "segment_name": "Senior Living",
+      "description": "Senior living community offering independent living, assisted living, and memory care services. Amenities include landscaped gardens, wellness center, and restaurant-style dining.",
+      "price": "$4,000/month",
+      "status": "rent",
+      "area": "Varies",
+      "location": "Retirement Village",
+      "facilities": ["Landscaped Gardens", "Wellness Center", "Restaurant Dining"],
+      "image": "https://i.ibb.co/Y0cSBgG/istockphoto-1170308490-1024x1024.jpg"
+    },
+    {
+      "id": 6,
+      "estate_title": "Seaside Vacation Rental",
+      "segment_name": "Vacation Rental",
+      "description": "Beachfront vacation rental with stunning ocean views. Fully furnished with a spacious deck for outdoor dining and relaxation.",
+      "price": "$300/night",
+      "status": "rent",
+      "area": "1500 sq ft",
+      "location": "Beachfront",
+      "facilities": ["Living Room", "Kitchen", "Ocean Views", "Deck"],
+      "image": "https://i.ibb.co/xf3cJTb/istockphoto-836169234-1024x1024.jpg"
+    },
+    {
+      "id": 7,
+      "estate_title": "Historic Villa",
+      "segment_name": "Vacation Rental",
+      "description": "Exquisite historic villa nestled in the countryside. Features beautifully landscaped gardens, a private pool, and traditional architecture.",
+      "price": "$700/night",
+      "status": "rent",
+      "area": "3000 sq ft",
+      "location": "Countryside",
+      "facilities": ["Living Room", "Kitchen", "Private Pool", "Gardens"],
+      "image": "https://i.ibb.co/Sxw3gpY/istockphoto-453090855-1024x1024.jpg"
+    },
+    {
+      "id": 8,
+      "estate_title": "City Center Condo",
+      "segment_name": "Apartment",
+      "description": "Contemporary condo located in the heart of the city. Walking distance to shops, restaurants, and cultural attractions.",
+      "price": "$400,000",
+      "status": "sale",
+      "area": "1200 sq ft",
+      "location": "City Center",
+      "facilities": ["Living Room", "Kitchen", "Close to Amenities"],
+      "image": "https://i.ibb.co/h7wXPcC/istockphoto-474275680-1024x1024.jpg"
+    },
+    {
+      "id": 9,
+      "estate_title": "Golf Course Home",
+      "segment_name": "Single Family Home",
+      "description": "Spacious home overlooking the golf course. Perfect for golf enthusiasts with easy access to the greens and clubhouse facilities.",
+      "price": "$600,000",
+      "status": "sale",
+      "area": "2800 sq ft",
+      "location": "Golf Course Community",
+      "facilities": ["Living Room", "Kitchen", "Golf Course Views"],
+      "image": "https://i.ibb.co/zmqWBkN/istockphoto-477756421-1024x1024.jpg"
+    }
+  ]
+  

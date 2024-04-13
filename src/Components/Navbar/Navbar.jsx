@@ -5,13 +5,14 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 
+
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
 
   const handleLogOut = () => {
     logOut()
     .then(result => {
-      toast.success('Succefully logout!')
+      toast.success('Succesfully logOut')
     })
     .catch(error =>{
       console.error(error)
@@ -98,7 +99,7 @@ const Navbar = () => {
             </NavLink>
           </div>
         )}
-        <ToastContainer />
+       <ToastContainer />
        
       </div>
     </div>

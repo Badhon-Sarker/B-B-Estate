@@ -15,6 +15,7 @@ import AboutUs from './Routes/AboutUs/AboutUs.jsx';
 import AuthProvider from './Components/AuthProvider/AuthProvider.jsx';
 import PrivateRoute from './PrivateRoute/PrivateRoute.jsx';
 import ErrorPage from './Components/ErrorPage/ErrorPage.jsx';
+import { HelmetProvider } from 'react-helmet-async';
 
 
 
@@ -39,11 +40,11 @@ const router = createBrowserRouter([
       },
       {
         path: '/updateprofile',
-        element: <UpdateProfile></UpdateProfile>
+        element: <PrivateRoute><UpdateProfile></UpdateProfile></PrivateRoute>
       },
       {
         path: '/aboutus',
-        element: <PrivateRoute><AboutUs></AboutUs></PrivateRoute>
+        element: <AboutUs></AboutUs>
       }
     ]
   },
@@ -56,9 +57,11 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     
-    <AuthProvider>
+   <HelmetProvider>
+   <AuthProvider>
       <RouterProvider router={router} />
     </AuthProvider>
+   </HelmetProvider>
 
   </React.StrictMode>,
 )

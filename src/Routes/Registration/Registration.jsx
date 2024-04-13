@@ -1,14 +1,21 @@
 import { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Components/AuthProvider/AuthProvider";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { IoMdEyeOff } from "react-icons/io";
+import { IoEye } from "react-icons/io5";
+import { Helmet } from "react-helmet-async";
 
 const Registration = () => {
-  const { registerUser} = useContext(AuthContext);
+  const { registerUser, profileUpdate } = useContext(AuthContext);
+  const [showPassword , setShowPassword] = useState(false)
+  const [passErr, setPassErr] = useState(null);
 
-  const [passErr , setPassErr] = useState(null)
+
+  const show = showPassword
+
 
   const isUpperCaseIncluded = (password) => {
     return /[A-Z]/.test(password);
@@ -23,6 +30,8 @@ const Registration = () => {
     handleSubmit,
     formState: { errors },
   } = useForm();
+
+  const navigate = useNavigate();
 
   const onSubmit = (data) => {
     const name = data.registerName;
@@ -46,17 +55,24 @@ const Registration = () => {
     }
 
     registerUser(email, password)
-    .then(reult =>{
+      .then((result) => {
+        profileUpdate(name, image);
+        toast.success("Account has been created!");
+      })
+      .catch((error) => {
+        console.error(error);
+      });
 
-      toast.success('Account has been created!')
-    })
-    .catch(error =>{
-      console.error(error)
-    })
+
+      const handleShowpassword = (showPassword) =>{
+
+        setShowPassword(!showPassword)
+      }
   };
 
   return (
     <div className="hero min-h-screen bg-base-200">
+      <Helmet><title>Register</title></Helmet>
       <div className="hero-content flex-col">
         <div className="text-center lg:text-left">
           <h1 className="text-5xl font-bold">Register now!</h1>
@@ -109,12 +125,24 @@ const Registration = () => {
               <label className="label">
                 <span className="label-text">Password</span>
               </label>
-              <input
-                type="password"
-                placeholder="Password"
-                className="input input-bordered"
-                {...register("registerPassword", { required: true })}
-              />
+              <div className="flex relative">
+                <div className="flex flex-grow">
+                  <input
+                   
+                     type={show? "text" : "password"}
+                    
+                    placeholder="Password"
+                    className="input input-bordered w-full"
+                    {...register("registerPassword", { required: true })}
+                  />
+                </div>
+
+                <div onClick={()=>{setShowPassword(!showPassword)}} className="absolute ml-56 mt-4">
+                  {
+                    show? <IoEye /> : <IoMdEyeOff />
+                  }
+                </div>
+              </div>
               {errors.registerPassword && (
                 <span className="text-red-500">*This field is required</span>
               )}

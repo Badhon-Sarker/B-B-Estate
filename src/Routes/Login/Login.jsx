@@ -6,6 +6,7 @@ import { useContext, useState } from "react";
 import { AuthContext } from "../../Components/AuthProvider/AuthProvider";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { Helmet } from "react-helmet-async";
 
 
 const Login = () => {
@@ -26,7 +27,7 @@ const Login = () => {
   const handleGoogleLogin = () =>{
     googleLogin()
     .then(result =>{
-     
+      toast.success('Successfully login')
      navigate(location?.state? location.state : '/')
     })
     .catch(error =>{
@@ -40,7 +41,7 @@ const Login = () => {
   
   githubLogin()
   .then(result =>{
-   
+    toast.success('Successfully login')
    navigate(location?.state? location.state : '/')
   })
   .catch(error =>{
@@ -61,12 +62,9 @@ const Login = () => {
     loginUser(email, password)
     .then(result => {
       
-
-      // {
-      //   location?.state? <Navigate to={location.state}></Navigate> : <Navigate to={'/'}></Navigate>
-      // }
-      
+      toast.success('Successfully login')
        navigate(location?.state? location.state : '/')
+       
       
       
     })
@@ -76,7 +74,9 @@ const Login = () => {
   }
 
   return (
+    
     <div className="hero min-h-screen bg-base-200">
+      <Helmet><title>Login</title></Helmet>
       <div className="hero-content flex-col">
         <div className="text-center lg:text-left">
           <h1 className="text-5xl font-bold">Login now!</h1>
@@ -118,12 +118,14 @@ const Login = () => {
             </div>
             <div className="text-sm mt-2">New here? <NavLink to={'/register'}>Create account</NavLink></div>
             </div>
-            <hr />
-            <div className="flex justify-center gap-1">
-                <div><button onClick={ () => {handleGoogleLogin()}} className="btn rounded-full"><FcGoogle /></button></div>
-                <div><button onClick={ () => {handleGithubLogin()}} className="btn rounded-full"><BsGithub /></button></div>
+            
+            <div className=" space-y-2">
+                <div className=""><button onClick={ () => {handleGoogleLogin()}} className="border-2 h-8 w-full flex justify-center items-center font-semibold gap-1 rounded-lg"><FcGoogle />  Sign in with Google</button></div>
+
+                <div className=""><button onClick={ () => {handleGithubLogin()}} className="border-2 h-8 w-full flex justify-center items-center font-semibold gap-1 rounded-lg"><BsGithub />  Sign in with Github</button></div>
+               
             </div>
-            <hr />
+           
             
           </form>
           <ToastContainer />
