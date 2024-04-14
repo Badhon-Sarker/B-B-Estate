@@ -1,22 +1,20 @@
 import { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-
-
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
 
   const handleLogOut = () => {
     logOut()
-    .then(result => {
-      toast.success('Succesfully logOut')
-    })
-    .catch(error =>{
-      console.error(error)
-    })
+      .then((result) => {
+        toast.success("Succesfully logOut");
+      })
+      .catch((error) => {
+        console.error(error);
+      });
   };
 
   const links = (
@@ -54,7 +52,7 @@ const Navbar = () => {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+            className="menu menu-sm dropdown-content mt-3 z-[10] p-2 shadow bg-base-100 rounded-box w-52"
           >
             {links}
           </ul>
@@ -66,22 +64,22 @@ const Navbar = () => {
       </div>
       <div className="navbar-end">
         {user ? (
-          <div className="flex gap-1">
-            <div
-              tabIndex={0}
-              role="button"
-              className="btn btn-ghost btn-circle avatar"
-            >
-              <div className="w-10 rounded-full">
-                {
-                  user ? <img
-                  alt="No Image"
-                  
-                  src={user.photoURL}
-                /> : <img
-                alt="No Image" />
-                }
-                
+          <div className="flex items-center gap-1">
+            <div>
+              <div
+                tabIndex={0}
+                role="button"
+                className="btn btn-ghost btn-circle avatar "
+              >
+                <div className="w-10 rounded-full">
+                  {user ? (
+                    <div className="relative overflow-hidden">
+                      <img alt="No Image" src={user.photoURL} />
+                    </div>
+                  ) : (
+                    <img alt="No Image" />
+                  )}
+                </div>
               </div>
             </div>
 
@@ -89,7 +87,6 @@ const Navbar = () => {
               <NavLink onClick={handleLogOut} className="btn">
                 LogOut
               </NavLink>
-              
             </div>
           </div>
         ) : (
@@ -99,11 +96,96 @@ const Navbar = () => {
             </NavLink>
           </div>
         )}
-       <ToastContainer />
-       
+
+        <ToastContainer />
       </div>
     </div>
   );
 };
+
+// {
+/* <div className="navbar-end">
+        {user ? (
+          <div className="flex items-center gap-1">
+            <div>
+              <div
+                tabIndex={0}
+                role="button"
+                className="btn btn-ghost btn-circle avatar"
+              >
+                <div className="w-10 rounded-full">
+                  {user ? (
+                    <img alt="No Image" src={user.photoURL} />
+                  ) : (
+                    <img alt="No Image" />
+                  )}
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <NavLink onClick={handleLogOut} className="btn">
+                LogOut
+              </NavLink>
+            </div>
+          </div>
+        ) : 
+        (
+          <div>
+            <NavLink to={"/login"} className="btn">
+              Login
+            </NavLink>
+          </div>
+        )}
+
+        <ToastContainer />
+      </div> */
+// }
+
+// {
+{/* <div className="absolute h-full w-full bg-black/20 flex items-center justify-center -bottom-1 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
+  <h1>Hey</h1>
+</div>; */}
+
+// }
+// {
+//   user ? (<div className="flex gap-1">
+//   <div
+//     tabIndex={0}
+//     role="button"
+//     className="btn btn-ghost btn-circle avatar"
+//   >
+
+//    <div className="w-10 rounded-full">
+//    {
+//      user ? <img
+//         alt="No Image"
+
+//         src={user.photoURL}
+//       /> : <img
+//       alt="No Image" />
+//       } </div>
+
+//    </div>
+//    </div>
+//   </div>
+
+// <img
+// alt="Tailwind CSS Navbar component"
+// src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
+// />
+
+//   <div>
+//     <NavLink onClick={handleLogOut} className="btn">
+//       LogOut
+//     </NavLink>
+
+//   </div>
+// </div>) : (<div>
+//<NavLink to={"/login"} className="btn">
+//     Login
+//   </NavLink>
+// </div>)
+//  }
 
 export default Navbar;
