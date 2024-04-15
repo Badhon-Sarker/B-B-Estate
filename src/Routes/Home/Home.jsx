@@ -6,7 +6,7 @@ import Navbar from "../../Components/Navbar/Navbar";
 
 const Home = () => {
     return (
-        <div>
+        <div className="mb-10">
 
             <Helmet><title>Home</title></Helmet>
             
