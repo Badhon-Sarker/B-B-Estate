@@ -130,14 +130,13 @@ const Agents = () => {
                       type="radio"
                       name="rating-2"
                       className="mask mask-star-2 bg-orange-400"
-                     
+                      defaultChecked
                     />
 
                     <input
                       type="radio"
                       name="rating-2"
                       className="mask mask-star-2 bg-orange-400"
-                      defaultChecked
                     />
                   </div>
                 </div>
@@ -266,13 +265,13 @@ const Agents = () => {
                       type="radio"
                       name="rating-2"
                       className="mask mask-star-2 bg-orange-400"
+                      defaultChecked
                     />
 
                     <input
                       type="radio"
                       name="rating-2"
                       className="mask mask-star-2 bg-orange-400"
-                      defaultChecked
                     />
                   </div>
                 </div>
