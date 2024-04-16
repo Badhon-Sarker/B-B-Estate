@@ -16,6 +16,13 @@ import AuthProvider from './Components/AuthProvider/AuthProvider.jsx';
 import PrivateRoute from './PrivateRoute/PrivateRoute.jsx';
 import ErrorPage from './Components/ErrorPage/ErrorPage.jsx';
 import { HelmetProvider } from 'react-helmet-async';
+import "react-toastify/dist/ReactToastify.css";
+import toast, { Toaster } from 'react-hot-toast';
+import EstateDetails from './Routes/EstateDetails/EstateDetails.jsx';
+
+
+
+
 
 
 
@@ -45,7 +52,14 @@ const router = createBrowserRouter([
       {
         path: '/aboutus',
         element: <AboutUs></AboutUs>
+      },
+      {
+        path: '/estates/:id',
+        element: <PrivateRoute><EstateDetails></EstateDetails></PrivateRoute>,
+        loader: () => fetch('../estate.json')
+        
       }
+      
     ]
   },
 ]);
@@ -59,7 +73,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     
    <HelmetProvider>
    <AuthProvider>
-      <RouterProvider router={router} />
+      <RouterProvider router={router} /> 
+      <Toaster />
     </AuthProvider>
    </HelmetProvider>
 

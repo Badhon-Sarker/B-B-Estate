@@ -2,8 +2,7 @@ import { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 import { NavLink, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Components/AuthProvider/AuthProvider";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import toast from "react-hot-toast";
 import { IoMdEyeOff } from "react-icons/io";
 import { IoEye } from "react-icons/io5";
 import { Helmet } from "react-helmet-async";
@@ -32,8 +31,10 @@ const Registration = () => {
   } = useForm();
 
   const navigate = useNavigate();
+  
 
   const onSubmit = (data) => {
+    
     const name = data.registerName;
     const image = data.registerPhotoURL;
     const email = data.registerEmail;
@@ -150,7 +151,7 @@ const Registration = () => {
             </div>
             <div className="form-control mt-6">
               <button className="btn btn-primary">Register</button>
-              <ToastContainer />
+              
             </div>
 
             <label className="label">

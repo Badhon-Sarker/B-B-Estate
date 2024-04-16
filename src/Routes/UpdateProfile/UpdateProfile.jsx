@@ -1,7 +1,6 @@
 import { useContext } from "react";
 import { AuthContext } from "../../Components/AuthProvider/AuthProvider";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import toast from "react-hot-toast";
 import { useForm } from "react-hook-form";
 import { Helmet } from "react-helmet-async";
 
@@ -81,7 +80,6 @@ const UpdateProfile = () => {
 
             <div className="form-control mt-6">
               <button className="btn btn-primary">Update</button>
-              <ToastContainer />
             </div>
           </form>
         </div>

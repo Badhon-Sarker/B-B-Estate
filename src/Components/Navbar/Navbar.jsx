@@ -1,16 +1,15 @@
 import { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import toast from "react-hot-toast";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
 
   const handleLogOut = () => {
     logOut()
-      .then((result) => {
-        toast.success("Succesfully logOut");
+      .then(() => {
+        toast.success("Successfully Log Out");
       })
       .catch((error) => {
         console.error(error);
@@ -63,19 +62,18 @@ const Navbar = () => {
         <ul className="menu menu-horizontal px-1">{links}</ul>
       </div>
       <div className="navbar-end">
-        {user ? (
+
+      {user ? (
           <div className="flex items-center gap-1">
             <div>
               <div
                 tabIndex={0}
                 role="button"
-                className="btn btn-ghost btn-circle avatar "
+                className="btn btn-ghost btn-circle avatar tooltip tooltip-left" data-tip={user?.displayName}
               >
                 <div className="w-10 rounded-full">
                   {user ? (
-                    <div className="relative overflow-hidden">
-                      <img alt="No Image" src={user.photoURL} />
-                    </div>
+                    <img alt="No Image" src={user.photoURL} />
                   ) : (
                     <img alt="No Image" />
                   )}
@@ -89,7 +87,8 @@ const Navbar = () => {
               </NavLink>
             </div>
           </div>
-        ) : (
+        ) : 
+        (
           <div>
             <NavLink to={"/login"} className="btn">
               Login
@@ -97,9 +96,11 @@ const Navbar = () => {
           </div>
         )}
 
-        <ToastContainer />
+        
       </div>
-    </div>
+        
+      </div>
+    
   );
 };
 
@@ -143,9 +144,11 @@ const Navbar = () => {
 // }
 
 // {
-{/* <div className="absolute h-full w-full bg-black/20 flex items-center justify-center -bottom-1 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
+// {
+  /* <div className="absolute h-full w-full bg-black/20 flex items-center justify-center -bottom-1 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
   <h1>Hey</h1>
-</div>; */}
+</div>; */
+// }
 
 // }
 // {
@@ -187,5 +190,41 @@ const Navbar = () => {
 //   </NavLink>
 // </div>)
 //  }
+
+
+// {user ? ( 
+//   <div className="flex  gap-1">
+//     <div className="tooltip tooltip-left" data-tip={user?.displayName}>
+//       <div
+//         tabIndex={0}
+//         role="button"
+//         className="btn btn-ghost btn-circle avatar "
+//       >
+//         <div className="w-10 rounded-full">
+//           {user ? (
+//             <div className="relative overflow-hidden">
+//               <img alt="No Image" src={user.photoURL} />
+//             </div>
+//           ) : (
+//             <img alt="No Image" />
+//           )}
+//         </div>
+//       </div>
+
+//       <div>
+//         <NavLink onClick={handleLogOut} className="btn">
+//           LogOut
+//         </NavLink>
+//       </div>
+//     </div>
+//   </div>
+  
+// ) : (
+//   <div>
+//     <NavLink to={"/login"} className="btn">
+//       Login
+//     </NavLink>
+//   </div>
+// )}
 
 export default Navbar;
