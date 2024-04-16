@@ -12,11 +12,15 @@ const Estate = ({ estate }) => {
 
   return (
     <div>
-      <div className="card h-96 bg-base-100 shadow-xl p-2 font-poppins">
+      <div
+        data-aos="flip-left"
+        data-aos-duration="1200"
+        className="card h-96 bg-base-100 shadow-xl p-2 font-poppins "
+      >
         <figure className=" md:h-44 xl:h-52">
           <img className="" src={image} alt="property image" />
         </figure>
-        <div className=" flex-grow">
+        <div data-aos="zoom-in" data-aos-duration="1300" className=" flex-grow">
           <div>
             <div className="flex justify-center items-center font-bold text-xl">
               {title}
@@ -32,16 +36,19 @@ const Estate = ({ estate }) => {
             </div>
           </div>
         </div>
-        <div className="flex justify-center my-2 font-medium">
-          <div className=" bg-yellow-200 px-2 rounded-md">
-            <p>For {status}</p>
-          </div>
-        </div>
 
-        <div className=" flex justify-center">
-          <NavLink to={`/estates/${estate.id}`}>
-            <button className="btn bg-emerald-300">Estate Details</button>
-          </NavLink>
+        <div data-aos="zoom-in" data-aos-duration="1300">
+          <div className="flex justify-center my-2 font-medium">
+            <div className=" bg-yellow-200 px-2 rounded-md">
+              <p>For {status}</p>
+            </div>
+          </div>
+
+          <div className=" flex justify-center">
+            <NavLink to={`/estates/${estate.id}`}>
+              <button className="btn bg-emerald-300">Estate Details</button>
+            </NavLink>
+          </div>
         </div>
       </div>
     </div>

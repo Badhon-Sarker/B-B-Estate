@@ -10,7 +10,7 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
 const Agents = () => {
   return (
-    <div className="font-poppins">
+    <div data-aos="zoom-in" data-aos-duration="1000" className="font-poppins">
       <Swiper
         spaceBetween={30}
         centeredSlides={true}
@@ -80,10 +80,10 @@ const Agents = () => {
                   </p>
                   <div className="w-full gap-2 my-2 space-y-2">
                     <div>
-                      <button className="btn w-40 bg-green-100">Call us</button>
+                      <button className="btn w-40 bg-green-200">Call us</button>
                     </div>
                     <div>
-                      <button className="btn w-40 bg-red-100">Email us</button>
+                      <button className="btn w-40 bg-red-200">Email us</button>
                     </div>
                   </div>
                 </div>
@@ -148,10 +148,10 @@ const Agents = () => {
                   </p>
                   <div className="w-full gap-2 my-2 space-y-2">
                     <div>
-                      <button className="btn w-40 bg-green-100">Call us</button>
+                      <button className="btn w-40 bg-green-200">Call us</button>
                     </div>
                     <div>
-                      <button className="btn w-40 bg-red-100">Email us</button>
+                      <button className="btn w-40 bg-red-200">Email us</button>
                     </div>
                   </div>
                 </div>
@@ -216,10 +216,10 @@ const Agents = () => {
                   </p>
                   <div className="w-full gap-2 my-2 space-y-2">
                     <div>
-                      <button className="btn w-40 bg-green-100">Call us</button>
+                      <button className="btn w-40 bg-green-200">Call us</button>
                     </div>
                     <div>
-                      <button className="btn w-40 bg-red-100">Email us</button>
+                      <button className="btn w-40 bg-red-200">Email us</button>
                     </div>
                   </div>
                 </div>
@@ -284,10 +284,10 @@ const Agents = () => {
                   </p>
                   <div className="w-full gap-2 my-2 space-y-2">
                     <div>
-                      <button className="btn w-40 bg-green-100">Call us</button>
+                      <button className="btn w-40 bg-green-200">Call us</button>
                     </div>
                     <div>
-                      <button className="btn w-40 bg-red-100">Email us</button>
+                      <button className="btn w-40 bg-red-200">Email us</button>
                     </div>
                   </div>
                 </div>
@@ -353,10 +353,10 @@ const Agents = () => {
                   </p>
                   <div className="w-full gap-2 my-2 space-y-2">
                     <div>
-                      <button className="btn w-40 bg-green-100">Call us</button>
+                      <button className="btn w-40 bg-green-200">Call us</button>
                     </div>
                     <div>
-                      <button className="btn w-40 bg-red-100">Email us</button>
+                      <button className="btn w-40 bg-red-200">Email us</button>
                     </div>
                   </div>
                 </div>

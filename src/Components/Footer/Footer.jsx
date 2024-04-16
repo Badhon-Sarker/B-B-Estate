@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 const Footer = () => {
   return (
     <footer >
-      <div className="footer p-10 bg-neutral text-neutral-content flex flex-col md:flex-row justify-center items-center md:justify-evenly font-poppins">
+      <div data-aos="fade-up" data-aos-duration="1000" className="footer p-10 bg-neutral text-neutral-content flex flex-col md:flex-row justify-center items-center md:justify-evenly font-poppins">
       <div>
         <h6 className="footer-title">Services</h6>
         <a className="link link-hover">Home Design</a>

@@ -1,13 +1,13 @@
 
 
-const EstateDetails = () => {
-    return (
-        <div className="font-poppins">
+// const EstateDetails = () => {
+//     return (
+//         <div className="font-poppins">
 
-            This is details
+//             This is details
             
-        </div>
-    );
-};
+//         </div>
+//     );
+// };
 
-export default EstateDetails;
+// export default EstateDetails;

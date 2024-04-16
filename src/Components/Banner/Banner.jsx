@@ -10,7 +10,7 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
 const Banner = () => {
   return (
-    <div className="font-poppins">
+    <div data-aos="fade-up" data-aos-duration="1000" className="font-poppins">
       <Swiper
         spaceBetween={30}
         centeredSlides={true}

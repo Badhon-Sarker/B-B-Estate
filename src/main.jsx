@@ -19,6 +19,10 @@ import { HelmetProvider } from 'react-helmet-async';
 import "react-toastify/dist/ReactToastify.css";
 import toast, { Toaster } from 'react-hot-toast';
 import EstateDetails from './Routes/EstateDetails/EstateDetails.jsx';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+// ..
+AOS.init();
 
 
 
