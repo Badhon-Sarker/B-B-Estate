@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 const ErrorPage = () => {
   return (
-    <div>
+    <div className="font-poppins">
       <div className="mt-28 md:mt-48 lg:mt-52 text-gray-600">
       <Helmet><title>Error</title></Helmet>
         <h1 className="text-9xl font-extrabold text-center">404</h1>

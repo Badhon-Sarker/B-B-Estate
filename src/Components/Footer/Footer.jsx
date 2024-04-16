@@ -1,7 +1,9 @@
+import { NavLink } from "react-router-dom";
+
 const Footer = () => {
   return (
     <footer >
-      <div className="footer p-10 bg-neutral text-neutral-content flex flex-col md:flex-row justify-center items-center md:justify-evenly">
+      <div className="footer p-10 bg-neutral text-neutral-content flex flex-col md:flex-row justify-center items-center md:justify-evenly font-poppins">
       <div>
         <h6 className="footer-title">Services</h6>
         <a className="link link-hover">Home Design</a>
@@ -11,10 +13,10 @@ const Footer = () => {
       </div>
       <div>
         <h6 className="footer-title">Company</h6>
-        <a className="link link-hover">About us</a>
-        <a className="link link-hover">Contact</a>
-        <a className="link link-hover">Agents</a>
-        <a className="link link-hover">Reviews</a>
+        <NavLink to={'/aboutus'} className="link link-hover">About us</NavLink>
+        <NavLink to={'/aboutus'} className="link link-hover">Contact</NavLink>
+        <NavLink to={'/aboutus'} className="link link-hover">Agents</NavLink>
+        <NavLink to={'/aboutus'} className="link link-hover">Reviews</NavLink>
       </div>
       <div>
         <h6 className="footer-title">Legal</h6>

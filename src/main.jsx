@@ -51,7 +51,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/aboutus',
-        element: <AboutUs></AboutUs>
+        element: <PrivateRoute><AboutUs></AboutUs></PrivateRoute>
       },
       {
         path: '/estates/:id',

@@ -20,13 +20,13 @@ const EstateDetails = () => {
   const facilities = estate.facilities;
 
   return (
-    <div>
+    <div className="font-poppins">
       <Helmet>
         <title>Estate | {title}</title>
       </Helmet>
       <div className="p-2">
         <div>
-          <h1 className="text-xl md:text-3xl lg:text-5xl font-extrabold  text-center mt-4 mb-5">
+          <h1 className="text-xl md:text-3xl lg:text-5xl font-extrabold  text-center mt-4 mb-5 font-poppins">
             {title}
           </h1>
         </div>
@@ -37,7 +37,7 @@ const EstateDetails = () => {
         </div>
 
         <div className="relative">
-          <div className=" absolute mt-2 md:mt-5 ml-2 md:ml-5">
+          <div className=" absolute mt-2 md:mt-5 ml-2 md:ml-5 xl:ml-48">
             <div className="skeleton rounded-full w-10 h-10 text-xl font-semibold md:w-20 md:h-20 flex justify-center items-center md:text-3xl md:font-extrabold bg-yellow-300">
               {status}
             </div>

@@ -11,7 +11,11 @@ export default {
         "banner-2": "url('https://i.ibb.co/HBr55Wb/pexels-pixabay-276724.jpg')",
         "banner-3": "url('https://i.ibb.co/ss2ZhZZ/pexels-photomix-company-565324.jpg')"
 
+      },
+      fontFamily: {
+        "poppins" :  '"Poppins", sans-serif'
       }
+
     },
   },
   plugins: [require("daisyui")],

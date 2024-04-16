@@ -7,7 +7,7 @@ const Home = () => {
   
 
   return (
-    <div className="mb-10">
+    <div className="mb-10 font-poppins">
       <Helmet>
         <title>Home</title>
       </Helmet>

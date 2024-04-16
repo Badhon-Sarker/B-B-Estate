@@ -4,7 +4,7 @@ import { GiBank } from "react-icons/gi";
 
 const WhyChooseUs = () => {
   return (
-    <div>
+    <div className="font-poppins">
       <div className="mt-10 flex flex-col md:flex-row items-center gap-3 justify-evenly p-2">
 
         <div className="card w-64 h-80 bg-base-100 shadow-xl">

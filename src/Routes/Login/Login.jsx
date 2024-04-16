@@ -56,7 +56,7 @@ const Login = () => {
   };
 
   return (
-    <div className="hero min-h-screen bg-base-200">
+    <div className="hero min-h-screen bg-base-200 font-poppins">
       <Helmet>
         <title>Login</title>
       </Helmet>

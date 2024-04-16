@@ -31,7 +31,7 @@ const UpdateProfile = () => {
   };
 
   return (
-    <div className="hero min-h-screen bg-base-200">
+    <div className="hero min-h-screen bg-base-200 font-poppins">
         <Helmet><title>Update Profile</title></Helmet>
       <div className="hero-content flex-col">
         <div className="text-center lg:text-left">

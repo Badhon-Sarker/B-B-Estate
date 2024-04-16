@@ -11,7 +11,7 @@ const Estates = () => {
   }, []);
 
   return (
-    <div>
+    <div className="font-poppins">
       <div className="mt-10">
         <h1 className="text-4xl font-bold text-center my-2">Estate</h1>
       </div>

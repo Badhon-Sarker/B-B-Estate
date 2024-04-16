@@ -72,7 +72,7 @@ const Registration = () => {
   };
 
   return (
-    <div className="hero min-h-screen bg-base-200">
+    <div className="hero min-h-screen bg-base-200 font-poppins">
       <Helmet><title>Register</title></Helmet>
       <div className="hero-content flex-col">
         <div className="text-center lg:text-left">

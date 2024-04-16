@@ -17,7 +17,7 @@ const Navbar = () => {
   };
 
   const links = (
-    <>
+    <div className="flex gap-2 flex-col lg:flex-row font-semibold lg:text-xl">
       <li>
         <NavLink to={"/"}>Home</NavLink>
       </li>
@@ -27,10 +27,10 @@ const Navbar = () => {
       <li>
         <NavLink to={"/aboutus"}>About Us</NavLink>
       </li>
-    </>
+    </div>
   );
   return (
-    <div className="navbar bg-base-100">
+    <div className="navbar bg-base-100 font-poppins">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">

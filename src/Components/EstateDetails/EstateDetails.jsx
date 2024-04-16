@@ -2,7 +2,7 @@
 
 const EstateDetails = () => {
     return (
-        <div>
+        <div className="font-poppins">
 
             This is details
             

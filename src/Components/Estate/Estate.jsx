@@ -12,7 +12,7 @@ const Estate = ({ estate }) => {
 
   return (
     <div>
-      <div className="card h-96 bg-base-100 shadow-xl p-2">
+      <div className="card h-96 bg-base-100 shadow-xl p-2 font-poppins">
         <figure className=" md:h-44 xl:h-52">
           <img className="" src={image} alt="property image" />
         </figure>
@@ -40,7 +40,7 @@ const Estate = ({ estate }) => {
 
         <div className=" flex justify-center">
           <NavLink to={`/estates/${estate.id}`}>
-            <button className="btn bg-green-500">Estate Details</button>
+            <button className="btn bg-emerald-300">Estate Details</button>
           </NavLink>
         </div>
       </div>
