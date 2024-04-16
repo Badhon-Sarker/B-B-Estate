@@ -42,7 +42,7 @@ const Registration = () => {
 
     if (password.length < 6) {
       setPassErr("");
-      return setPassErr("Password should have 6 characters");
+      return setPassErr("Password must have 6 characters");
     }
 
     if (!isUpperCaseIncluded(password)) {
