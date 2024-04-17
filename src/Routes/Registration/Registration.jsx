@@ -139,7 +139,7 @@ const Registration = () => {
                   />
                 </div>
 
-                <div onClick={()=>{setShowPassword(!showPassword)}} className="absolute ml-60 md:ml-60 mt-4">
+                <div onClick={()=>{setShowPassword(!showPassword)}} className="absolute ml-60 md:ml-72 mt-4">
                   {
                     show? <IoEye /> : <IoMdEyeOff />
                   }
