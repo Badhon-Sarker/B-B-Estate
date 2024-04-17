@@ -1,9 +1,11 @@
+import { Helmet } from "react-helmet-async";
 import Agents from "../../Components/Agents/Agents";
 import Leaflet from "../../Components/Leaflet/Leaflet";
 
 const AboutUs = () => {
   return (
     <div className="font-poppins">
+        <Helmet><title>About Us</title></Helmet>
       <div className="my-3">
         <div data-aos="fade-down" data-aos-duration="1000" className="text-xl font font-semibold md:text-2xl lg:text-4xl md:font-bold text-center mb-5">
           Our Agents
