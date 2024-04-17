@@ -47,12 +47,12 @@ const Registration = () => {
 
     if (!isUpperCaseIncluded(password)) {
       setPassErr("");
-      return setPassErr("Password need to have Uppercase");
+      return setPassErr("Password must have at least one Uppercase");
     }
 
     if (!isLowerCaseIncluded(password)) {
       setPassErr("");
-      return setPassErr("Password need to have Lowercase");
+      return setPassErr("Password must have at least one Lowercase");
     }
 
     registerUser(email, password)
@@ -80,7 +80,7 @@ const Registration = () => {
           <h1 data-aos="fade-down" data-aos-duration="1000" className="text-5xl font-bold">Register now!</h1>
         </div>
         <div data-aos="zoom-in" data-aos-duration="1000" className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-          <form onSubmit={handleSubmit(onSubmit)} className="card-body">
+          <form onSubmit={handleSubmit(onSubmit)} className="card-body px-1">
             <div className="form-control">
               <label className="label">
                 <span className="label-text">Name</span>
@@ -139,7 +139,7 @@ const Registration = () => {
                   />
                 </div>
 
-                <div onClick={()=>{setShowPassword(!showPassword)}} className="absolute ml-52 md:ml-60 mt-4">
+                <div onClick={()=>{setShowPassword(!showPassword)}} className="absolute ml-60 md:ml-60 mt-4">
                   {
                     show? <IoEye /> : <IoMdEyeOff />
                   }
