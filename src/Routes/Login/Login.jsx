@@ -42,6 +42,7 @@ const Login = () => {
   };
 
   const onSubmit = (data) => {
+    
     const email = data.loginEmail;
     const password = data.loginPassword;
 

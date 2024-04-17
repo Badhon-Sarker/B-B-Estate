@@ -2,7 +2,7 @@ Website name: B&B Estate
 
 Github link: https://github.com/programming-hero-web-course-4/b9a9-real-estate-Badhon-Sarker
 
-Live link: 
+Live link: https://assignment-9-50b39.web.app/estates/6
 
 
 Features & Characteristics:
